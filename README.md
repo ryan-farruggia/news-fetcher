@@ -1,2 +1,5 @@
-# news-fetcher
-A program that fetches the most current news headlines in a clean, ad-free, readable format with references to sources used.
+# how to run
+
+Open a terminal and run `npm start` in the master folder. Open a browser tab to `localhost:5500` or wherever the console says it's running.
+
+done.
