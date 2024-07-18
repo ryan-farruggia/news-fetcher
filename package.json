@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "start": "node js/server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "name": "news-fetcher-vanilla",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

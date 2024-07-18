@@ -1,0 +1,207 @@
+html, body {
+  background-color: #171d25;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url("/img/bgtile.png");
+  background-repeat: repeat;
+  min-height: 200vh;
+  animation: moveBackground 60s linear infinite;
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for all elements */
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  overflow-y: scroll;
+}
+
+div {
+  display: flex;
+}
+
+p, a, i, b, span, h1, h2, h3, h4, h5, h6, button {
+  font-family: "Inter", sans-serif, Arial, Helvetica, sans-serif;
+  color: whitesmoke;
+}
+
+p {
+  margin: 0;
+}
+
+#main-content {
+  padding: 50px;
+  flex-direction: column;
+}
+#main-content #title-container {
+  width: 100%;
+  justify-content: space-between;
+  padding-bottom: 70px;
+  padding-top: 10px;
+}
+#main-content #title-container #live-text {
+  align-items: center;
+}
+#main-content #title-container #live-text img {
+  padding-right: 10px;
+}
+#main-content #title-container #middle-header {
+  flex-direction: column;
+  align-items: center;
+}
+#main-content #title-container #middle-header #countdown {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #999;
+}
+#main-content #content-container {
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#main-content #content-container .news-card {
+  width: 30%;
+  height: 350px;
+  background-image: none;
+  background: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  flex-direction: column;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.3s;
+}
+#main-content #content-container .news-card .light {
+  flex-direction: column;
+  position: relative;
+  padding: 20px;
+  height: 90%;
+  z-index: 1; /* Places the content above the pseudo-element */
+  background: rgba(255, 255, 255, 0.1); /* Light background for readability */
+}
+#main-content #content-container .news-card .light .source-time .source-img {
+  border-radius: 8px;
+}
+#main-content #content-container .news-card .light .source-time .time-published {
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #1e252f;
+  border-radius: 8px;
+  box-shadow: 5px 8px #888888;
+  font-weight: 600;
+}
+#main-content #content-container .news-card .light .text-block {
+  flex-direction: column;
+  margin-top: auto;
+}
+#main-content #content-container .news-card .light .text-block .news-headline {
+  width: 600px;
+  font-size: 30px;
+  font-weight: 600;
+  padding-bottom: 12px;
+}
+#main-content #content-container .news-card .light .text-block .description {
+  font-size: 24px;
+  color: #999;
+}
+#main-content #content-container .news-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8); /* Dark overlay with 10% opacity */
+  z-index: 0; /* Places the pseudo-element below the content */
+}
+#main-content #content-container .news-card:hover {
+  filter: brightness(1.2);
+  outline: 3px solid #aaa;
+}
+#main-content #content-container .news-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.headline {
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.live {
+  font-size: 50px;
+  font-weight: 700;
+  color: rgb(205, 3, 3);
+  animation: breatheRed 2s infinite;
+}
+
+@keyframes breatheRed {
+  0% {
+    color: rgb(205, 3, 3);
+  }
+  50% {
+    color: lightcoral;
+  }
+  100% {
+    color: rgb(205, 3, 3);
+  }
+}
+button {
+  width: 170.433px;
+  background: transparent;
+  outline: #334050 4px solid;
+  border: none;
+  color: whitesmoke;
+  font-size: 26px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+button:hover {
+  background: #28323e;
+  transition: 0.1s;
+}
+
+.modal {
+  position: fixed;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: top 0.5s ease, opacity 0.5s ease;
+}
+
+.modal.show {
+  top: 20px;
+  opacity: 1;
+}/*# sourceMappingURL=index.css.map */

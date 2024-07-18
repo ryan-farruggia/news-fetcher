@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <title>Trending US News Headlines</title>
+    <link href="styles/index.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- notification modal -->
+    <div class="modal" id="refreshModal">
+        <p>News headlines updated!</p>
+    </div>
+    <!-- content here -->
+    <div id="main-content">
+        <div id="title-container">
+            <div id="live-text">
+                <img src="img/redcircle.svg" width="50" height="50" />
+                <p class="live">LIVE</p>
+            </div>
+            <div id="middle-header">
+                <p class="headline">Trending News in USA</p>
+                <p id="countdown">News automatically updates in: 2:00</p>
+            </div>
+            <button id="refresh" onclick="runGauntlet()">Refresh</button>
+        </div>
+
+        <div id="content-container">
+            <template id="news-card-template">
+                <a href="#" class="news-card">
+                    <div class="light">
+                        <div class="source-time">
+                            <img class="source-img" src="" width="50" height="50" />
+                            <p class="time-published"></p>
+                        </div>
+                        <div class="text-block">
+                            <p class="news-headline"></p>
+                            <p class="description"></p>
+                        </div>
+                    </div>
+                </a>
+            </template>
+        </div>
+
+        <footer>
+
+        </footer>
+    </div>
+    <script src="js/index.js"></script>
+    <script src="js/fetchnews.js" defer></script>
+</body>
+</html>

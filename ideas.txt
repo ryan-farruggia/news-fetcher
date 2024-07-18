@@ -1,0 +1,14 @@
+make it so that new news entries are detected and marked with a span
+
+so:
+
+- an array currently stores all entries.
+- have this array compared to a second array that will store new entries.
+-if there are any new entries compared to the old array, mark only those entries
+and only display the new ones on the page (append them to the top).
+- animate the new ones in while keeping the old ones displayed
+- that would be pretty epic i think
+
+
+*
+then just export it to an electron app and cross yo mf fingers!
